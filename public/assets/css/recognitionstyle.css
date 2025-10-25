@@ -1,0 +1,426 @@
+/* Recognition Form Page Professional Styles */
+.recognition-main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header Section */
+.recognition-header {
+    background: #ffffff;
+    color: #2c3e50;
+    padding: 25px 30px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e1e8ed;
+}
+
+.recognition-header-content {
+    max-width: 100%;
+}
+
+.recognition-title-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.recognition-header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+    color: #2c3e50;
+    letter-spacing: -0.5px;
+}
+
+.recognition-admin-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: #22c55e;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(34, 197, 94, 0.25);
+}
+
+.recognition-admin-btn:hover {
+    background: #16a34a;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.35);
+    color: white;
+    text-decoration: none;
+}
+
+.recognition-admin-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.recognition-header p {
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #6c757d;
+}
+
+/* Tab Navigation */
+.recognition-tab-navigation {
+    display: flex;
+    background: white;
+    border-radius: 12px;
+    padding: 6px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e1e8ed;
+}
+
+.recognition-tab-button {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    color: #6c757d;
+}
+
+.recognition-tab-button:hover {
+    color: #495057;
+    background: #f8f9fa;
+}
+
+.recognition-tab-button.active {
+    background: #22c55e;
+    color: white;
+    box-shadow: 0 2px 8px rgba(34, 197, 94, 0.3);
+}
+
+.recognition-tab-button.active:hover {
+    background: #16a34a;
+    color: white;
+}
+
+/* Tab Content */
+.recognition-tab-content {
+    display: none;
+}
+
+.recognition-tab-content.active {
+    display: block;
+}
+
+/* Request Section */
+.recognition-request-section {
+    background: white;
+    border-radius: 12px;
+    padding: 35px 30px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e1e8ed;
+}
+
+.recognition-request-section h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0 0 15px 0;
+    letter-spacing: -0.5px;
+}
+
+.recognition-request-section p {
+    font-size: 1rem;
+    color: #6c757d;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Button Group */
+.recognition-button-group {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.recognition-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 160px;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.recognition-btn-primary {
+    background: #22c55e;
+    color: white;
+    box-shadow: 0 3px 12px rgba(34, 197, 94, 0.25);
+}
+
+.recognition-btn-primary:hover {
+    background: #16a34a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(34, 197, 94, 0.35);
+    color: white;
+    text-decoration: none;
+}
+
+.recognition-btn:active {
+    transform: translateY(0);
+}
+
+/* Icon Styles */
+.recognition-btn-icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+/* Submissions Content */
+.recognition-submissions-content {
+    background: white;
+    border-radius: 12px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e1e8ed;
+}
+
+.recognition-submissions-content h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0 0 15px 0;
+    letter-spacing: -0.5px;
+}
+
+.recognition-submissions-content p {
+    font-size: 1rem;
+    color: #6c757d;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Loading States */
+.recognition-btn.loading,
+.recognition-admin-btn.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.recognition-btn.loading::after,
+.recognition-admin-btn.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 18px;
+    height: 18px;
+    margin: -9px 0 0 -9px;
+    border: 2px solid transparent;
+    border-top: 2px solid currentColor;
+    border-radius: 50%;
+    animation: buttonSpin 1s linear infinite;
+}
+
+@keyframes buttonSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .recognition-main-container {
+        max-width: 95%;
+        padding: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .recognition-main-container {
+        padding: 15px;
+    }
+
+    .recognition-title-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .recognition-header h1 {
+        font-size: 1.75rem;
+    }
+    
+    .recognition-header p {
+        font-size: 0.95rem;
+    }
+
+    .recognition-admin-btn {
+        align-self: flex-start;
+        font-size: 0.85rem;
+        padding: 8px 16px;
+    }
+    
+    .recognition-tab-navigation {
+        flex-direction: row;
+        gap: 4px;
+    }
+    
+    .recognition-tab-button {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .recognition-request-section {
+        padding: 30px 20px;
+    }
+    
+    .recognition-request-section h2 {
+        font-size: 1.6rem;
+    }
+    
+    .recognition-request-section p {
+        font-size: 0.95rem;
+    }
+    
+    .recognition-button-group {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+    
+    .recognition-btn {
+        width: 100%;
+        max-width: 280px;
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .recognition-submissions-content {
+        padding: 30px 20px;
+    }
+
+    .recognition-submissions-content h2 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .recognition-main-container {
+        padding: 12px;
+    }
+    
+    .recognition-header {
+        padding: 20px;
+    }
+    
+    .recognition-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .recognition-header p {
+        font-size: 0.9rem;
+    }
+
+    .recognition-admin-btn {
+        font-size: 0.8rem;
+        padding: 7px 14px;
+    }
+
+    .recognition-admin-icon {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .recognition-tab-button {
+        padding: 10px 12px;
+        font-size: 0.85rem;
+    }
+    
+    .recognition-request-section {
+        padding: 25px 15px;
+    }
+    
+    .recognition-request-section h2 {
+        font-size: 1.4rem;
+    }
+    
+    .recognition-request-section p {
+        font-size: 0.9rem;
+    }
+    
+    .recognition-btn {
+        padding: 11px 18px;
+        font-size: 0.85rem;
+        min-width: 140px;
+    }
+
+    .recognition-btn-icon {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .recognition-submissions-content {
+        padding: 25px 15px;
+    }
+    
+    .recognition-submissions-content h2 {
+        font-size: 1.4rem;
+    }
+
+    .recognition-submissions-content p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+    .recognition-btn {
+        min-width: 120px;
+        font-size: 0.8rem;
+        padding: 10px 15px;
+    }
+
+    .recognition-button-group {
+        gap: 10px;
+    }
+
+    .recognition-header h1 {
+        font-size: 1.3rem;
+    }
+
+    .recognition-request-section h2 {
+        font-size: 1.25rem;
+    }
+
+    .recognition-submissions-content h2 {
+        font-size: 1.25rem;
+    }
+}

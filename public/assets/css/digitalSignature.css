@@ -1,0 +1,46 @@
+/* Original signature pad button styles */
+.sign-pad-button-submit {
+  margin-top: 5px;
+  background-color: #3b82f6;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.sign-pad-button-submit:hover {
+  background-color: #2563eb;
+}
+
+.sign-pad-button-clear {
+  margin-top: 5px;
+  background-color: #ef4444;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.sign-pad-button-clear:hover {
+  background-color: #dc2626;
+}
+
+/* Position the form below the supervisorboard header */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure the form appears below the header */
+form {
+  margin-top: 2rem !important;
+  position: relative !important;
+  width: 100% !important;
+  max-width: 600px !important;
+}

@@ -1,0 +1,828 @@
+/* Admin Requisition Detail Page Styles */
+.admin-requisition-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f8f9fa;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header Section */
+.admin-header {
+    background: white;
+    border-radius: 12px;
+    padding: 25px 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e1e8ed;
+}
+
+.admin-header-content {
+    max-width: 100%;
+}
+
+.admin-title-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.admin-header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+    color: #2c3e50;
+    letter-spacing: -0.5px;
+}
+
+.admin-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.admin-back-btn,
+.admin-refresh-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.admin-back-btn {
+    background: #22c55e;
+    color: white;
+    box-shadow: 0 2px 8px rgba(34, 197, 94, 0.25);
+}
+
+.admin-back-btn:hover {
+    background: #16a34a;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(34, 197, 94, 0.35);
+    color: white;
+    text-decoration: none;
+}
+
+.admin-refresh-btn {
+    background: #6c757d;
+    color: white;
+    box-shadow: 0 2px 8px rgba(108, 117, 125, 0.25);
+}
+
+.admin-refresh-btn:hover {
+    background: #5a6268;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(108, 117, 125, 0.35);
+}
+
+.admin-back-icon,
+.admin-refresh-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.admin-header p {
+    font-size: 1rem;
+    margin: 0;
+    color: #6c757d;
+    line-height: 1.5;
+}
+
+/* Statistics Grid */
+.admin-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.admin-stat-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e1e8ed;
+    transition: transform 0.3s ease;
+}
+
+.admin-stat-card:hover {
+    transform: translateY(-2px);
+}
+
+.admin-stat-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.admin-stat-icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+.admin-stat-icon.pending {
+    background: rgba(255, 193, 7, 0.1);
+    color: #ffc107;
+}
+
+.admin-stat-icon.approved {
+    background: rgba(34, 197, 94, 0.1);
+    color: #22c55e;
+}
+
+.admin-stat-icon.rejected {
+    background: rgba(220, 53, 69, 0.1);
+    color: #dc3545;
+}
+
+.admin-stat-content h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0;
+    color: #2c3e50;
+}
+
+.admin-stat-content p {
+    font-size: 0.9rem;
+    margin: 0;
+    color: #6c757d;
+}
+
+/* Table Container */
+.admin-table-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e1e8ed;
+    overflow: hidden;
+}
+
+.admin-table-header {
+    padding: 20px 25px;
+    border-bottom: 1px solid #e1e8ed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-table-header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    color: #2c3e50;
+}
+
+.admin-table-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.admin-search-input,
+.admin-filter-select {
+    padding: 8px 12px;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    color: #495057;
+    background: white;
+}
+
+.admin-search-input {
+    width: 200px;
+}
+
+.admin-search-input:focus,
+.admin-filter-select:focus {
+    outline: none;
+    border-color: #22c55e;
+    box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.1);
+}
+
+/* Table Wrapper */
+.admin-table-wrapper {
+    overflow-x: auto;
+}
+
+/* Table Styles */
+.admin-requisition-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.admin-requisition-table th,
+.admin-requisition-table td {
+    padding: 15px 12px;
+    text-align: left;
+    border-bottom: 1px solid #e1e8ed;
+    vertical-align: middle;
+}
+
+.admin-requisition-table th {
+    background: #f8f9fa;
+    font-weight: 600;
+    color: #2c3e50;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.admin-requisition-table tbody tr:hover {
+    background: #f8f9fa;
+}
+
+/* Table Cell Content */
+.req-id {
+    font-weight: 600;
+    color: #22c55e;
+}
+
+.req-subject {
+    font-weight: 500;
+    color: #2c3e50;
+    max-width: 150px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.file-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #22c55e;
+    text-decoration: none;
+    font-size: 0.85rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.file-link:hover {
+    background: rgba(34, 197, 94, 0.1);
+    color: #16a34a;
+    text-decoration: none;
+}
+
+.file-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.content-preview {
+    max-width: 180px;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.designation {
+    background: rgba(34, 197, 94, 0.1);
+    color: #16a34a;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.date {
+    color: #6c757d;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.remarks {
+    color: #495057;
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-badge.pending {
+    background: rgba(255, 193, 7, 0.1);
+    color: #ffc107;
+    border: 1px solid rgba(255, 193, 7, 0.3);
+}
+
+.status-badge.approved {
+    background: rgba(34, 197, 94, 0.1);
+    color: #22c55e;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.status-badge.rejected {
+    background: rgba(220, 53, 69, 0.1);
+    color: #dc3545;
+    border: 1px solid rgba(220, 53, 69, 0.3);
+}
+
+/* Status Actions */
+.status-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 120px;
+}
+
+.status-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.status-checkbox.approved {
+    color: #22c55e;
+}
+
+.status-checkbox.approved:hover {
+    background: rgba(34, 197, 94, 0.1);
+}
+
+.status-checkbox.rejected {
+    color: #dc3545;
+}
+
+.status-checkbox.rejected:hover {
+    background: rgba(220, 53, 69, 0.1);
+}
+
+.status-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.checkmark {
+    width: 16px;
+    height: 16px;
+    border: 2px solid currentColor;
+    border-radius: 4px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.status-checkbox input[type="checkbox"]:checked + .checkmark {
+    background: currentColor;
+}
+
+.status-checkbox input[type="checkbox"]:checked + .checkmark::after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.action-completed {
+    color: #6c757d;
+    font-size: 0.85rem;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Submit Section */
+.admin-submit-section {
+    padding: 20px 25px;
+    border-top: 1px solid #e1e8ed;
+    text-align: right;
+}
+
+.admin-submit-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 30px;
+    background: #22c55e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.25);
+    position: relative;
+    overflow: hidden;
+}
+
+.admin-submit-btn:hover {
+    background: #16a34a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(34, 197, 94, 0.35);
+}
+
+.admin-submit-btn:active {
+    transform: translateY(0);
+}
+
+.submit-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Loading States */
+.admin-back-btn.loading,
+.admin-refresh-btn.loading,
+.admin-submit-btn.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.admin-back-btn.loading::after,
+.admin-refresh-btn.loading::after,
+.admin-submit-btn.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 18px;
+    height: 18px;
+    margin: -9px 0 0 -9px;
+    border: 2px solid transparent;
+    border-top: 2px solid currentColor;
+    border-radius: 50%;
+    animation: buttonSpin 1s linear infinite;
+}
+
+@keyframes buttonSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .admin-requisition-container {
+        max-width: 95%;
+        padding: 18px;
+    }
+
+    .admin-requisition-table {
+        font-size: 0.85rem;
+    }
+
+    .admin-requisition-table th,
+    .admin-requisition-table td {
+        padding: 12px 10px;
+    }
+}
+
+@media (max-width: 992px) {
+    .admin-title-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .admin-actions {
+        align-self: flex-start;
+    }
+
+    .admin-stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 15px;
+    }
+
+    .admin-stat-card {
+        padding: 15px;
+    }
+
+    .admin-stat-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .admin-stat-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .admin-table-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .admin-table-actions {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .admin-search-input {
+        width: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-requisition-container {
+        padding: 15px;
+    }
+
+    .admin-header {
+        padding: 20px;
+    }
+
+    .admin-header h1 {
+        font-size: 1.75rem;
+    }
+
+    .admin-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .admin-back-btn,
+    .admin-refresh-btn {
+        justify-content: center;
+        padding: 10px 16px;
+        font-size: 0.85rem;
+    }
+
+    .admin-stats-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .admin-stat-card {
+        padding: 15px;
+    }
+
+    .admin-stat-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .admin-table-header {
+        padding: 15px 20px;
+    }
+
+    .admin-table-header h2 {
+        font-size: 1.3rem;
+    }
+
+    .admin-table-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .admin-search-input,
+    .admin-filter-select {
+        width: 100%;
+    }
+
+    .admin-requisition-table {
+        font-size: 0.8rem;
+    }
+
+    .admin-requisition-table th,
+    .admin-requisition-table td {
+        padding: 10px 8px;
+    }
+
+    /* Hide less important columns on mobile */
+    .admin-requisition-table th:nth-child(6),
+    .admin-requisition-table td:nth-child(6),
+    .admin-requisition-table th:nth-child(7),
+    .admin-requisition-table td:nth-child(7) {
+        display: none;
+    }
+
+    .content-preview,
+    .req-subject {
+        max-width: 120px;
+    }
+
+    .status-actions {
+        min-width: 100px;
+    }
+
+    .status-checkbox {
+        font-size: 0.8rem;
+        padding: 4px 8px;
+    }
+
+    .admin-submit-section {
+        padding: 15px 20px;
+        text-align: center;
+    }
+
+    .admin-submit-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 12px 25px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .admin-requisition-container {
+        padding: 12px;
+    }
+
+    .admin-header {
+        padding: 15px;
+    }
+
+    .admin-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .admin-header p {
+        font-size: 0.9rem;
+    }
+
+    .admin-back-btn,
+    .admin-refresh-btn {
+        padding: 8px 14px;
+        font-size: 0.8rem;
+    }
+
+    .admin-back-icon,
+    .admin-refresh-icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    .admin-stat-card {
+        padding: 12px;
+        gap: 12px;
+    }
+
+    .admin-stat-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .admin-stat-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .admin-stat-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .admin-stat-content p {
+        font-size: 0.8rem;
+    }
+
+    .admin-table-header {
+        padding: 12px 15px;
+    }
+
+    .admin-table-header h2 {
+        font-size: 1.2rem;
+    }
+
+    .admin-requisition-table th,
+    .admin-requisition-table td {
+        padding: 8px 6px;
+    }
+
+    /* Hide more columns on very small screens */
+    .admin-requisition-table th:nth-child(4),
+    .admin-requisition-table td:nth-child(4),
+    .admin-requisition-table th:nth-child(5),
+    .admin-requisition-table td:nth-child(5),
+    .admin-requisition-table th:nth-child(8),
+    .admin-requisition-table td:nth-child(8) {
+        display: none;
+    }
+
+    .content-preview,
+    .req-subject {
+        max-width: 100px;
+    }
+
+    .file-link {
+        font-size: 0.75rem;
+        padding: 2px 6px;
+    }
+
+    .file-icon {
+        width: 14px;
+        height: 14px;
+    }
+
+    .designation {
+        font-size: 0.7rem;
+        padding: 2px 6px;
+    }
+
+    .status-badge {
+        font-size: 0.7rem;
+        padding: 4px 8px;
+    }
+
+    .status-checkbox {
+        font-size: 0.75rem;
+        padding: 3px 6px;
+        gap: 6px;
+    }
+
+    .checkmark {
+        width: 14px;
+        height: 14px;
+    }
+
+    .admin-submit-section {
+        padding: 12px 15px;
+    }
+
+    .admin-submit-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .submit-icon {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* Extra responsive tweaks */
+@media (max-width: 360px) {
+    .admin-header h1 {
+        font-size: 1.3rem;
+    }
+
+    .admin-table-wrapper {
+        margin: 0 -15px;
+    }
+
+    .admin-requisition-table th,
+    .admin-requisition-table td {
+        padding: 6px 4px;
+        font-size: 0.75rem;
+    }
+
+    .req-subject,
+    .content-preview {
+        max-width: 80px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .admin-requisition-container {
+        background: white;
+        box-shadow: none;
+        max-width: none;
+        padding: 0;
+    }
+
+    .admin-header,
+    .admin-table-container {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+
+    .admin-submit-section {
+        display: none;
+    }
+
+    .status-actions {
+        display: none;
+    }
+
+    .admin-requisition-table th,
+    .admin-requisition-table td {
+        font-size: 0.85rem;
+        padding: 8px;
+    }
+}

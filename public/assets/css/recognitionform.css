@@ -1,0 +1,293 @@
+/* Override any parent constraints */
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Override master layout constraints - Balanced Width */
+.recognition-container {
+    max-width: 1400px !important;
+    width: 95% !important;
+    margin: 0 auto !important;
+    padding: 20px !important;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Make form take maximum available width */
+.recognition-container form {
+    width: 100% !important;
+    max-width: none !important;
+}
+
+.recognition-container h1 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.recognition-container p {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    text-align: center;
+    font-style: italic;
+}
+
+.recognition-back-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+}
+
+.recognition-back-btn:hover {
+    background: linear-gradient(135deg, #229954, #27ae60);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
+    color: white;
+    text-decoration: none;
+}
+
+.recognition-error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 12px 16px;
+    border: 1px solid #f5c6cb;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: none;
+    font-weight: 500;
+}
+
+.recognition-success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 12px 16px;
+    border: 1px solid #c3e6cb;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: none;
+    font-weight: 500;
+}
+
+.recognition-form-group {
+    margin-bottom: 25px;
+    width: 100% !important;
+    max-width: none !important;
+}
+
+.recognition-form-group label {
+    display: block;
+    font-weight: 600;
+    color: #b7c0c9;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.recognition-form-group input[type="text"] {
+    width: 100% !important;
+    max-width: none !important;
+    padding: 15px 20px;
+    border: 2px solid #e1e5e9;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: white;
+    box-sizing: border-box;
+    display: block;
+}
+
+.recognition-form-group input[type="text"]:focus {
+    outline: none;
+    border-color: #0d9c29;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+    transform: translateY(-1px);
+}
+
+.recognition-form-group textarea {
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 120px;
+    padding: 15px 20px;
+    border: 2px solid #e1e5e9;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: inherit;
+    resize: vertical;
+    transition: all 0.3s ease;
+    background-color: white;
+    box-sizing: border-box;
+    display: block;
+}
+
+.recognition-form-group textarea:focus {
+    outline: none;
+    border-color: #07893d;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.recognition-char-count {
+    text-align: right;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+.recognition-btn-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.recognition-btn {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(194, 202, 207, 0.3);
+    min-width: 200px;
+}
+
+.recognition-btn:hover {
+    background: green;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(17, 174, 54, 0.4);
+}
+
+.recognition-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(14, 138, 24, 0.3);
+}
+
+/* CKEditor Container Styles - Optimal Width */
+.cke {
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+    margin: 0 !important;
+}
+
+.cke_top {
+    width: 100% !important;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef) !important;
+    border-bottom: 2px solid #dee2e6 !important;
+}
+
+.cke_contents {
+    background-color: white !important;
+    min-height: 400px !important;
+    width: 100% !important;
+}
+
+.cke_bottom {
+    width: 100% !important;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef) !important;
+    border-top: 1px solid #dee2e6 !important;
+}
+
+.cke_bottom {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef) !important;
+    border-top: 1px solid #dee2e6 !important;
+}
+
+/* Laravel Alert Styles */
+.alert {
+    border-radius: 10px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.alert-success {
+    background-color: #d4edda !important;
+    color: #155724 !important;
+    border: 1px solid #c3e6cb;
+}
+
+/* Invalid Feedback Styles */
+.is-invalid {
+    border-color: #dc3545 !important;
+}
+
+.invalid-feedback {
+    color: #dc3545 !important;
+    font-size: 0.875em !important;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+/* Responsive Design - Better Scaling */
+@media (max-width: 1600px) {
+    .recognition-container {
+        width: 90% !important;
+        max-width: 1200px !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    .recognition-container {
+        width: 85% !important;
+        max-width: 1000px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .recognition-container {
+        padding: 15px !important;
+        width: 95% !important;
+        max-width: none !important;
+    }
+    
+    .recognition-container h1 {
+        font-size: 2rem;
+    }
+    
+    .recognition-form-group input[type="text"],
+    .recognition-form-group textarea {
+        padding: 12px 15px;
+    }
+    
+    .recognition-btn {
+        padding: 12px 30px;
+        font-size: 1rem;
+        min-width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .recognition-container {
+        padding: 10px !important;
+        width: 98% !important;
+    }
+    
+    .recognition-container h1 {
+        font-size: 1.7rem;
+    }
+    
+    .recognition-container p {
+        font-size: 1rem;
+    }
+    
+    .recognition-back-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}

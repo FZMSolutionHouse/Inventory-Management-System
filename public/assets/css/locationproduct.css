@@ -1,0 +1,232 @@
+/* GIL Product Tracker Styles - Unique class names to avoid conflicts */
+
+.gil-product-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+.gil-product-header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    padding: 24px 0;
+}
+
+.gil-product-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gil-product-header-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.gil-product-logo {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 16px rgba(16, 185, 129, 0.3);
+}
+
+.gil-product-logo i {
+    font-size: 32px;
+    color: #ffffff;
+}
+
+.gil-product-header-text h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1d1d1f;
+    margin-bottom: 4px;
+}
+
+.gil-product-header-text p {
+    font-size: 14px;
+    color: #86868b;
+}
+
+.gil-product-btn-add {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.gil-product-btn-add:hover {
+    background-color: #1d1d1f;
+}
+
+.gil-product-btn-add i {
+    font-size: 16px;
+}
+
+/* Main Content */
+.gil-product-main-content {
+    padding: 32px 0;
+    background-color: #f5f5f7;
+}
+
+/* Products Grid */
+.gil-product-products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+/* Product Card */
+.gil-product-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.gil-product-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
+}
+
+.gil-product-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.gil-product-title-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.gil-product-icon {
+    font-size: 24px;
+    color: #1d1d1f;
+}
+
+.gil-product-card-header h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1d1d1f;
+}
+
+.gil-product-location-badge {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    color: #86868b;
+}
+
+.gil-product-location-badge i {
+    font-size: 12px;
+}
+
+.gil-product-employee-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #86868b;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.gil-product-employee-info i {
+    font-size: 14px;
+}
+
+.gil-product-description {
+    font-size: 14px;
+    color: #515154;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.gil-product-btn-view-location {
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid #e5e5e7;
+    color: #1d1d1f;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.gil-product-btn-view-location:hover {
+    background-color: #f5f5f7;
+    border-color: #d2d2d7;
+}
+
+.gil-product-btn-view-location i {
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gil-product-header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .gil-product-btn-add {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .gil-product-products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gil-product-header-text h1 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gil-product-container {
+        padding: 0 16px;
+    }
+
+    .gil-product-header {
+        padding: 16px 0;
+    }
+
+    .gil-product-logo {
+        width: 56px;
+        height: 56px;
+    }
+
+    .gil-product-logo i {
+        font-size: 28px;
+    }
+
+    .gil-product-card {
+        padding: 20px;
+    }
+}

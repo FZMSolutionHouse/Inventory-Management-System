@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    background-color: #f8fafc;
+    padding: 20px;
+}
+
+.header-container {
+    background: white;
+    padding: 16px; /* Further reduced padding from 20px */
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07); /* Softer shadow */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px; /* Reduced gap from 16px */
+    width: 1200px;
+    margin: 0 auto 20px auto;
+}
+
+.header-content {
+    flex: 1;
+    min-width: 250px;
+}
+
+.header-title {
+    font-size: 20px; /* Reduced font size from 22px */
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 2px; /* Reduced margin from 4px */
+}
+
+.header-subtitle {
+    font-size: 13px; /* Reduced font size from 14px */
+    color: #6b7280;
+    font-weight: 400;
+}
+
+.button-group {
+    display: flex;
+    gap: 8px; /* Reduced gap from 12px */
+    align-items: center;
+}
+
+.export-btn,
+.add-btn {
+    padding: 6px 12px; /* Further reduced padding */
+    border-radius: 6px;
+    font-size: 13px; /* Reduced font size from 14px */
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px; /* Reduced icon gap */
+    transition: all 0.2s ease;
+}
+
+.export-btn {
+    background: white;
+    border: 1px solid #d1d5db;
+    color: #374151;
+}
+
+.export-btn:hover {
+    background: #f9fafb;
+    border-color: #9ca3af;
+}
+
+.add-btn {
+    background: #1f2937;
+    border: none;
+    color: white;
+    text-decoration: none;
+}
+
+.add-btn:hover {
+    background: #111827;
+}
+
+.export-icon,
+.plus-icon {
+    width: 14px; /* Reduced icon size */
+    height: 14px; /* Reduced icon size */
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+}
+
+/* Responsive adjustment for header */
+@media (max-width: 640px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

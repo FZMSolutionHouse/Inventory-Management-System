@@ -1,0 +1,169 @@
+/* =================================================================
+   CORE STYLES
+   ================================================================= */
+
+/* This sets the gray background for the page */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    background-color: #f8f9fa;
+    padding: 30px; /* Adds space around the main container */
+    box-sizing: border-box;
+}
+
+/* 
+  THIS IS THE MOST IMPORTANT PART:
+  It constrains the width of your content and centers it.
+*/
+.container {
+    max-width: 1200px; /* Sets the maximum width */
+    margin: 0 auto;    /* Centers the container horizontally */
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+}
+
+/* =================================================================
+   COMPONENT STYLING (Header, Buttons, Table)
+   ================================================================= */
+
+/* Header: "Users" and "Manage all your users" */
+.header {
+    margin-bottom: 25px;
+}
+.header h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 600;
+    color: #212529;
+}
+.header p {
+    margin: 5px 0 0;
+    color: #6c757d;
+    font-size: 16px;
+}
+
+/* "Create User" Button */
+.create-user-btn {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+.create-user-btn:hover {
+    background-color: #218838;
+}
+
+/* --- User Table Styling --- */
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Table Header (ID, NAME, etc.) */
+.users-table th {
+    background-color: #f8f9fa;
+    color: #495057;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+/* All table cells */
+.users-table th, .users-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+    vertical-align: middle;
+}
+
+/* Role Tags (e.g., "Supervisor") */
+.role-tag {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 15px; /* Pill shape */
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 8px;
+}
+.action-buttons .btn {
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: opacity 0.2s;
+}
+.action-buttons .btn:hover {
+    opacity: 0.85;
+}
+
+.btn-show { background-color: #343a40; }
+.btn-edit { background-color: #007bff; }
+.btn-delete { background-color: #dc3545; }
+
+
+/* =================================================================
+   RESPONSIVE STYLES for Mobile
+   ================================================================= */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 15px; /* Less space on mobile */
+    }
+    .container {
+        padding: 20px;
+    }
+    .users-table thead {
+        display: none;
+    }
+    .users-table tr {
+        display: block;
+        margin-bottom: 15px;
+        border: 1px solid #dee2e6;
+        border-radius: 4px;
+    }
+    .users-table td {
+        display: block;
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+        border-bottom: 1px solid #e9ecef;
+    }
+    .users-table tr td:last-child {
+        border-bottom: none;
+    }
+    .users-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: 45%;
+        text-align: left;
+        font-weight: 600;
+        color: #495057;
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+    .action-buttons {
+        justify-content: flex-end;
+    }
+}
