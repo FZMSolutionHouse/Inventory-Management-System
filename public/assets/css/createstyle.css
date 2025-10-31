@@ -2,7 +2,123 @@
 * {
     box-sizing: border-box;
 }
+/* =================================================================
+   EDIT MODAL STYLES
+   ================================================================= */
 
+.modal-content-large {
+    max-width: 600px;
+}
+
+/* Form styling inside modal */
+.user-form .form-group {
+    margin-bottom: 20px;
+}
+
+.user-form .form-group:last-of-type {
+    margin-bottom: 0;
+}
+
+.user-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #495057;
+    font-size: 14px;
+}
+
+.user-form input[type="text"],
+.user-form input[type="email"],
+.user-form input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    background-color: #ffffff;
+    color: #212529;
+}
+
+.user-form input[type="text"]:focus,
+.user-form input[type="email"]:focus,
+.user-form input[type="password"]:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.user-form input::placeholder {
+    color: #adb5bd;
+}
+
+/* Modal footer for edit form */
+.modal-footer {
+    padding: 20px 25px;
+    border-top: 1px solid #dee2e6;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    background-color: #f8f9fa;
+}
+
+.btn-modal-cancel {
+    background-color: #6c757d;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.btn-modal-cancel:hover {
+    background-color: #5a6268;
+}
+
+.btn-modal-submit {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.btn-modal-submit:hover {
+    background-color: #218838;
+}
+
+/* Mobile responsive for edit modal */
+@media screen and (max-width: 768px) {
+    .modal-content-large {
+        width: 95%;
+        margin: 15px;
+        max-width: none;
+    }
+    
+    .user-form input[type="text"],
+    .user-form input[type="email"],
+    .user-form input[type="password"] {
+        font-size: 16px; /* Prevent zoom on iOS */
+    }
+    
+    .modal-footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .btn-modal-cancel,
+    .btn-modal-submit {
+        width: 100%;
+    }
+}
 /* Centering wrapper for the entire page */
 body {
    

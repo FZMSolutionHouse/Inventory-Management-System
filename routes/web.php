@@ -180,13 +180,12 @@ Route::put('/Premission/{id}',[editshowpremissionController::class, 'updatepremi
 Route::delete('/permission/{id}',[PremissionController::class, 'delete'])->name('permission.delete');
 Route::get('/Premission/{id}',[recordPremissionController::class,'sshowrecord'])->name('Premssion.show');
 
-
-// Simple Product (only name & detail)
-Route::get('/product', [ProductController::class, 'viewproduct'])->name('products.index');
-Route::post('/product', [createproductController::class, 'store'])->name('products.store');
-Route::delete('/Product/{id}', [ProductController::class, 'delete'])->name('products.delete');
-Route::get('/product/{id}', [showProductController::class,'sshowrecordpro'])->name('product.show');
-
+// Product routes
+Route::get('/product', [ProductController::class, 'index'])->name('products.index');
+Route::get('/createproduct', [ProductController::class, 'create'])->name('products.create');
+Route::post('/products', [ProductController::class, 'store'])->name('products.store');
+Route::put('/Product/{id}', [ProductController::class, 'update'])->name('products.update');
+Route::delete('/Product/{id}', [ProductController::class, 'destroy'])->name('products.destroy');
 
 
 //Create User

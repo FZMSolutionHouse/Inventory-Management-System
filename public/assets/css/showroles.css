@@ -1,6 +1,199 @@
 
     /* Clean styles that work WITH adminmaster.css, not against it */
+    /* =================================================================
+   ROLE MODAL STYLES
+   ================================================================= */
+
+.modal-content-role {
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+/* Green gradient header for role modal */
+.modal-header-role {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    padding: 30px;
+    color: white;
+}
+
+.modal-close-white {
+    color: white;
+}
+
+.modal-close-white:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.role-id-badge-modal {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 10px;
+    color: white;
+}
+
+/* Info Grid */
+.role-info-grid-modal {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.role-info-card-modal {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #10b981;
+    transition: transform 0.3s ease;
+}
+
+.role-info-card-modal:hover {
+    transform: translateY(-3px);
+}
+
+.role-info-label-modal {
+    color: #495057;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.role-info-value-modal {
+    font-size: 24px;
+    font-weight: 700;
+    color: #10b981;
+}
+
+/* Permissions Section */
+.role-permissions-section-modal {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.role-section-title-modal {
+    font-size: 20px;
+    color: #212529;
+    margin-bottom: 20px;
+    font-weight: 700;
+    border-bottom: 3px solid #10b981;
+    padding-bottom: 10px;
+}
+
+.role-stats-bar-modal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #d1fae5;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #6ee7b7;
+}
+
+.role-stat-number-modal {
+    font-size: 28px;
+    font-weight: 700;
+    color: #10b981;
+}
+
+.role-stat-label-modal {
+    font-size: 12px;
+    color: #065f46;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+/* Permissions Grid */
+.role-permissions-grid-modal {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 12px;
+}
+
+.role-permission-chip-modal {
+    background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+    padding: 12px 15px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #065f46;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    border: 1px solid #6ee7b7;
+}
+
+.role-permission-chip-modal:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+    background: linear-gradient(135deg, #a7f3d0 0%, #6ee7b7 100%);
+}
+
+.role-check-icon-modal {
+    background-color: #10b981;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 11px;
+    flex-shrink: 0;
+}
+
+.role-empty-state-modal {
+    text-align: center;
+    padding: 30px;
+    color: #6c757d;
+    font-size: 15px;
+}
+
+/* Permission Badge in Table */
+.permission-badge {
+    display: inline-block;
+    background-color: #d1fae5;
+    color: #065f46;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 2px;
+    border: 1px solid #6ee7b7;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+    .modal-content-role {
+        width: 95%;
+        max-height: 95vh;
+    }
     
+    .modal-header-role {
+        padding: 20px;
+    }
+    
+    .role-info-grid-modal {
+        grid-template-columns: 1fr;
+    }
+    
+    .role-permissions-grid-modal {
+        grid-template-columns: 1fr;
+    }
+}
     .role-display-page {
         width: 100%;
         padding: 0;

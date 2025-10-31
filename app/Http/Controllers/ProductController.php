@@ -2,39 +2,82 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\product;  // Import your createuser model
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    
-    public function viewproduct(){
-
-     
-       // Use the  model to fetch all users
-       $products = product::all();
-       
-       return view('product', compact("products"));
+    /**
+     * Display a listing of the products.
+     */
+    public function index()
+    {
+        $products = Product::all();
+        return view('Product', compact('products'));
     }
 
-    
-    public function delete($id) {
-    try {
-        $products = product::find($id);
-        
-        if (!$products) {
-            session()->flash('error', 'User not found.');
-            return redirect()->back();
-        }
-        
-        $products->delete();
-        session()->flash('success', 'User deleted successfully.');
-        
-    } catch (\Exception $e) {
-        session()->flash('error', 'Error deleting user: ' . $e->getMessage());
+    /**
+     * Show the form for creating a new product.
+     */
+    public function create()
+    {
+        return view('createproduct');
     }
-    
-    return redirect()->back();
-    
-}
+
+    /**
+     * Store a newly created product in storage.
+     */
+    public function store(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'detail' => 'required|string|max:1000',
+        ]);
+
+        Product::create([
+            'name' => $request->name,
+            'detail' => $request->detail,
+        ]);
+
+        return redirect()->route('products.index')->with('success', 'Product created successfully!');
+    }
+
+    /**
+     * Display the specified product.
+     */
+    public function show($id)
+    {
+        $product = Product::findOrFail($id);
+        return view('showProduct', compact('product'));
+    }
+
+    /**
+     * Update the specified product in storage.
+     */
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'detail' => 'required|string|max:1000',
+        ]);
+
+        $product = Product::findOrFail($id);
+        $product->update([
+            'name' => $request->name,
+            'detail' => $request->detail,
+        ]);
+
+        return redirect()->route('products.index')->with('success', 'Product updated successfully!');
+    }
+
+    /**
+     * Remove the specified product from storage.
+     */
+    public function destroy($id)
+    {
+        $product = Product::findOrFail($id);
+        $product->delete();
+
+        return redirect()->route('products.index')->with('success', 'Product deleted successfully!');
+    }
 }

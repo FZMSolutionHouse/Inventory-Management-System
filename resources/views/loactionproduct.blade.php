@@ -65,7 +65,7 @@
                             <i class="fas fa-globe"></i>
                             Lat: {{ $product->latitude }}, Long: {{ $product->longitude }}
                         </div>
-                        <button class="gil-product-btn-view-location" onclick="viewLocation({{ $product->latitude }}, {{ $product->longitude }})">
+                        <button class="gil-product-btn-view-location" onclick="viewLocation('{{ $product->latitude }}', '{{ $product->longitude }}')">
                             <i class="fas fa-map-marker-alt"></i>
                             View Location on Map
                         </button>
@@ -86,8 +86,15 @@
 
     <script>
         function viewLocation(lat, lng) {
-            // Open Google Maps with the coordinates
-            window.open(`https://www.google.com/maps?q=${lat},${lng}`, '_blank');
+            // Convert to float and maintain precision
+            const latitude = parseFloat(lat);
+            const longitude = parseFloat(lng);
+            
+            console.log('Opening map with:', latitude, longitude);
+            
+            // Use the search API format which handles coordinates better
+            window.open(`https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}`, '_blank');
         }
     </script>
+
 @endsection

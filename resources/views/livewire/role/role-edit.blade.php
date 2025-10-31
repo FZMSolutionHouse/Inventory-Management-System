@@ -1,6 +1,135 @@
 @extends('layouts.adminmaster')
 @section('content')
 <style>
+    /* =================================================================
+   EDIT ROLE MODAL STYLES
+   ================================================================= */
+
+.modal-content-edit-role {
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+/* Form Elements in Edit Modal */
+.form-group-modal {
+    margin-bottom: 25px;
+}
+
+.form-label-modal {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-input-modal {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    background: white;
+    color: #212529;
+    box-sizing: border-box;
+}
+
+.form-input-modal:focus {
+    outline: none;
+    border-color: #10b981;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+/* Permissions Section in Edit Modal */
+.permissions-section-edit {
+    margin-top: 25px;
+}
+
+.edit-permissions-grid-modal {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 12px;
+    margin-top: 15px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 5px;
+}
+
+.permission-checkbox-item-modal {
+    background: #f8f9fa;
+    padding: 12px 15px;
+    border-radius: 6px;
+    border: 2px solid #e9ecef;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.permission-checkbox-item-modal:hover {
+    border-color: #10b981;
+    background: #f0fdf4;
+}
+
+.permission-checkbox-item-modal.checked {
+    background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+    border-color: #10b981;
+}
+
+.permission-checkbox-item-modal input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    cursor: pointer;
+    accent-color: #10b981;
+}
+
+.permission-checkbox-item-modal label {
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    color: #495057;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.permission-checkbox-item-modal.checked label {
+    color: #065f46;
+    font-weight: 600;
+}
+
+/* Modal Footer Buttons */
+.btn-modal-submit-green {
+    background-color: #10b981;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.btn-modal-submit-green:hover {
+    background-color: #059669;
+}
+
+/* Mobile Responsive for Edit Role Modal */
+@media screen and (max-width: 768px) {
+    .modal-content-edit-role {
+        width: 95%;
+        max-height: 95vh;
+    }
+    
+    .edit-permissions-grid-modal {
+        grid-template-columns: 1fr;
+        max-height: 300px;
+    }
+}
     .edit-role-container {
         max-width: 1200px;
         margin: 0 auto;
